@@ -44,10 +44,8 @@ public class SeenCommand implements CommandExecutor {
 
             if (isOnlineMode) {
                 // If in online mode, use UUID
-                targetPlayer = Bukkit.getPlayer(targetName);
-                if (targetPlayer != null) {
-                    targetUUID = targetPlayer.getUniqueId();
-                } else {
+                targetUUID = Bukkit.getOfflinePlayer(targetName).getUniqueId();
+                if (targetUUID == null) {
                     sender.sendMessage(Component.text("No such player found.").color(NamedTextColor.RED));
                     return true;
                 }
