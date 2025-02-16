@@ -1,0 +1,8 @@
+name: SimpleSeen
+version: '1.0'
+main: me.jefferyt.simpleSeen.SeenPlugin
+api-version: '1.21'
+commands:
+  seen:
+    description: Shows the last time a player was seen on the server
+    usage: /seen <player>
